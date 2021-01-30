@@ -105,6 +105,7 @@ docker run -v $PWD:/workspace \
 
 ## Using the Docker image with drone 
 
+```yml
 - name: publish readme
   image: thomaslacaze/dockerhub-description
   settings:
@@ -114,6 +115,7 @@ docker run -v $PWD:/workspace \
     password:
       from_secret: docker_password
     readme: /drone/src/README.md
+```
 ## License
 
 [MIT](LICENSE)
