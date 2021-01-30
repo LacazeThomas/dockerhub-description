@@ -35,7 +35,7 @@ If this is not the case the path can be specified with the `readme-filepath` inp
 
 ```yml
     - name: Docker Hub Description
-      uses: thomaslacaze/dockerhub-description@v2
+      uses: thomaslacaze/dockerhub-description@v2.4.1
       with:
         username: ${{ secrets.PLUGIN_USERNAME }}
         password: ${{ secrets.PLUGIN_PASSWORD }}
