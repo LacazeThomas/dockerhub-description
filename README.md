@@ -1,4 +1,4 @@
-# Docker Hub Description
+# Docker Hub Description comptatible with Drone.io !
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Docker%20Hub%20Description-blue.svg?colorA=24292e&colorB=0366d6&style=flat&longCache=true&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAM6wAADOsB5dZE0gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAERSURBVCiRhZG/SsMxFEZPfsVJ61jbxaF0cRQRcRJ9hlYn30IHN/+9iquDCOIsblIrOjqKgy5aKoJQj4O3EEtbPwhJbr6Te28CmdSKeqzeqr0YbfVIrTBKakvtOl5dtTkK+v4HfA9PEyBFCY9AGVgCBLaBp1jPAyfAJ/AAdIEG0dNAiyP7+K1qIfMdonZic6+WJoBJvQlvuwDqcXadUuqPA1NKAlexbRTAIMvMOCjTbMwl1LtI/6KWJ5Q6rT6Ht1MA58AX8Apcqqt5r2qhrgAXQC3CZ6i1+KMd9TRu3MvA3aH/fFPnBodb6oe6HM8+lYHrGdRXW8M9bMZtPXUji69lmf5Cmamq7quNLFZXD9Rq7v0Bpc1o/tp0fisAAAAASUVORK5CYII=)](https://github.com/marketplace/actions/docker-hub-description)
 
 A GitHub action to update a Docker Hub repository description from `README.md`.
@@ -9,11 +9,11 @@ This is useful if you `docker push` your images to Docker Hub. It provides an ea
 
 ```yml
     - name: Docker Hub Description
-      uses: peter-evans/dockerhub-description@v2
+      uses: thomaslacaze/dockerhub-description@v2
       with:
         username: ${{ secrets.PLUGIN_USERNAME }}
         password: ${{ secrets.PLUGIN_PASSWORD }}
-        repository: peterevans/dockerhub-description
+        repository: thomaslacaze/dockerhub-description
 ```
 
 ### Action inputs
@@ -35,11 +35,11 @@ If this is not the case the path can be specified with the `readme-filepath` inp
 
 ```yml
     - name: Docker Hub Description
-      uses: peter-evans/dockerhub-description@v2
+      uses: thomaslacaze/dockerhub-description@v2
       with:
         username: ${{ secrets.PLUGIN_USERNAME }}
         password: ${{ secrets.PLUGIN_PASSWORD }}
-        repository: peterevans/dockerhub-description
+        repository: thomaslacaze/dockerhub-description
         readme-filepath: ./path/to/README.md
 ```
 
@@ -63,11 +63,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Docker Hub Description
-      uses: peter-evans/dockerhub-description@v2
+      uses: thomaslacaze/dockerhub-description@v2
       with:
         username: ${{ secrets.PLUGIN_USERNAME }}
         password: ${{ secrets.PLUGIN_PASSWORD }}
-        repository: peterevans/dockerhub-description
+        repository: thomaslacaze/dockerhub-description
 ```
 
 Updates the Docker Hub repository description whenever a new release is created.
@@ -82,11 +82,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Docker Hub Description
-      uses: peter-evans/dockerhub-description@v2
+      uses: thomaslacaze/dockerhub-description@v2
       with:
         username: ${{ secrets.PLUGIN_USERNAME }}
         password: ${{ secrets.PLUGIN_PASSWORD }}
-        repository: peterevans/dockerhub-description
+        repository: thomaslacaze/dockerhub-description
 ```
 
 ## Using the Docker image independently of GitHub Actions
@@ -100,7 +100,7 @@ docker run -v $PWD:/workspace \
   -e PLUGIN_PASSWORD='xxxxx' \
   -e PLUGIN_REPOSITORY='user1/my-docker-image' \
   -e PLUGIN_README='/workspace/README.md' \
-  peterevans/dockerhub-description:2
+  thomaslacaze/dockerhub-description:2
 ```
 
 ## License
