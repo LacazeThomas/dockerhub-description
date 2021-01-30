@@ -30,7 +30,7 @@ steps:
       from_secret: docker_username
     password:
       from_secret: docker_password
-    readme: README.md
+    readme: /drone/src/README.md
   when:
     branch:
     - master
