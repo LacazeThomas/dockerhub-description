@@ -11,8 +11,8 @@ This is useful if you `docker push` your images to Docker Hub. It provides an ea
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v2
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        username: ${{ secrets.PLUGIN_USERNAME }}
+        password: ${{ secrets.PLUGIN_PASSWORD }}
         repository: peterevans/dockerhub-description
 ```
 
@@ -37,8 +37,8 @@ If this is not the case the path can be specified with the `readme-filepath` inp
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v2
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        username: ${{ secrets.PLUGIN_USERNAME }}
+        password: ${{ secrets.PLUGIN_PASSWORD }}
         repository: peterevans/dockerhub-description
         readme-filepath: ./path/to/README.md
 ```
@@ -65,8 +65,8 @@ jobs:
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v2
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        username: ${{ secrets.PLUGIN_USERNAME }}
+        password: ${{ secrets.PLUGIN_PASSWORD }}
         repository: peterevans/dockerhub-description
 ```
 
@@ -84,8 +84,8 @@ jobs:
     - name: Docker Hub Description
       uses: peter-evans/dockerhub-description@v2
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        username: ${{ secrets.PLUGIN_USERNAME }}
+        password: ${{ secrets.PLUGIN_PASSWORD }}
         repository: peterevans/dockerhub-description
 ```
 
@@ -96,10 +96,10 @@ Simply volume mount the location of the `README.md` file to the container and se
 
 ```bash
 docker run -v $PWD:/workspace \
-  -e DOCKERHUB_USERNAME='user1' \
-  -e DOCKERHUB_PASSWORD='xxxxx' \
-  -e DOCKERHUB_REPOSITORY='user1/my-docker-image' \
-  -e README_FILEPATH='/workspace/README.md' \
+  -e PLUGIN_USERNAME='user1' \
+  -e PLUGIN_PASSWORD='xxxxx' \
+  -e PLUGIN_REPOSITORY='user1/my-docker-image' \
+  -e PLUGIN_README='/workspace/README.md' \
   peterevans/dockerhub-description:2
 ```
 
