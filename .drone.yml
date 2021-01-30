@@ -21,3 +21,18 @@ steps:
     event:
     - push
     - tag
+
+- name: publish readme
+  image: thomaslacaze/dockerhub-description
+  settings:
+    DOCKERHUB_REPOSITORY: thomaslacaze/dockerhub-description
+    DOCKERHUB_USERNAME:
+      from_secret: docker_username
+    DOCKERHUB_PASSWORD:
+      from_secret: docker_password
+    README_FILEPATH: README.md
+  when:
+    branch:
+    - master
+    - main
+###
