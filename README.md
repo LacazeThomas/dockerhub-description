@@ -107,9 +107,9 @@ docker run -v $PWD:/workspace \
 
 ```yml
 - name: publish readme
-  image: thomaslacaze/dockerhub-description
+  image: thomaslacaze/dockerhub-description:2.4.1
   settings:
-    repository: thomaslacaze/dockerhub-description:2.4.1
+    repository: thomaslacaze/dockerhub-description
     username:
       from_secret: docker_username
     password:
