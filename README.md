@@ -103,6 +103,17 @@ docker run -v $PWD:/workspace \
   thomaslacaze/dockerhub-description:2
 ```
 
+## Using the Docker image with drone 
+
+- name: publish readme
+  image: thomaslacaze/dockerhub-description
+  settings:
+    repository: thomaslacaze/dockerhub-description:2
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    readme: /drone/src/README.md
 ## License
 
 [MIT](LICENSE)
