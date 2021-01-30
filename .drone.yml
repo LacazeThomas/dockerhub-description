@@ -25,12 +25,12 @@ steps:
 - name: publish readme
   image: thomaslacaze/dockerhub-description
   settings:
-    DOCKERHUB_REPOSITORY: thomaslacaze/dockerhub-description
-    DOCKERHUB_USERNAME:
+    repository: thomaslacaze/dockerhub-description
+    username:
       from_secret: docker_username
-    DOCKERHUB_PASSWORD:
+    password:
       from_secret: docker_password
-    README_FILEPATH: README.md
+    readme: README.md
   when:
     branch:
     - master
