@@ -52,7 +52,7 @@ function getToken(username, password) {
             headers: { 'Content-Type': 'application/json' }
         });
         const json = yield response.json();
-        core.setSecret(json['token']);
+        //core.setSecret(json['token']);
         return json['token'];
     });
 }
