@@ -4,7 +4,7 @@ IFS=$'\n\t'
 
 
 ls -l ./
-ls -l /drone/src/.git/
+echo $PWD
 
 # Execute the action code and output to file
 node index.js > action.log 2>&1
