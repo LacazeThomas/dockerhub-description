@@ -17,7 +17,7 @@ export async function getToken(
     headers: {'Content-Type': 'application/json'}
   })
   const json = await response.json()
-  core.setSecret(json['token'])
+  //core.setSecret(json['token'])
   return json['token']
 }
 
