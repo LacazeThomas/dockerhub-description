@@ -9,7 +9,7 @@ This is useful if you `docker push` your images to Docker Hub. It provides an ea
 
 ```yml
     - name: Docker Hub Description
-      uses: thomaslacaze/dockerhub-description@v2
+      uses: thomaslacaze/dockerhub-description@v2.4.1
       with:
         username: ${{ secrets.PLUGIN_USERNAME }}
         password: ${{ secrets.PLUGIN_PASSWORD }}
@@ -60,10 +60,10 @@ jobs:
   dockerHubDescription:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.4.1
 
     - name: Docker Hub Description
-      uses: thomaslacaze/dockerhub-description@v2
+      uses: thomaslacaze/dockerhub-description@v2.4.1
       with:
         username: ${{ secrets.PLUGIN_USERNAME }}
         password: ${{ secrets.PLUGIN_PASSWORD }}
@@ -79,10 +79,10 @@ jobs:
   dockerHubDescription:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.4.1
 
     - name: Docker Hub Description
-      uses: thomaslacaze/dockerhub-description@v2
+      uses: thomaslacaze/dockerhub-description@v2.4.1
       with:
         username: ${{ secrets.PLUGIN_USERNAME }}
         password: ${{ secrets.PLUGIN_PASSWORD }}
@@ -100,7 +100,7 @@ docker run -v $PWD:/workspace \
   -e PLUGIN_PASSWORD='xxxxx' \
   -e PLUGIN_REPOSITORY='user1/my-docker-image' \
   -e PLUGIN_README='/workspace/README.md' \
-  thomaslacaze/dockerhub-description:2
+  thomaslacaze/dockerhub-description:2.4.1
 ```
 
 ## Using the Docker image with drone 
@@ -109,7 +109,7 @@ docker run -v $PWD:/workspace \
 - name: publish readme
   image: thomaslacaze/dockerhub-description
   settings:
-    repository: thomaslacaze/dockerhub-description:2
+    repository: thomaslacaze/dockerhub-description:2.4.1
     username:
       from_secret: docker_username
     password:

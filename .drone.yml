@@ -25,7 +25,7 @@ steps:
 - name: publish readme
   image: thomaslacaze/dockerhub-description
   settings:
-    repository: thomaslacaze/dockerhub-description
+    repository: thomaslacaze/dockerhub-description:2.4.1
     username:
       from_secret: docker_username
     password:
